@@ -1,0 +1,22 @@
+---
+description: Core Second Brain architecture, Karpathy LLM Wiki rules, and ISO 27001 / SOC 2 / NZ Privacy Act 2020 compliance guardrails for River City Digital.
+globs: "**/*"
+alwaysApply: true
+---
+
+# River City Digital (`Company-brain`) — Mandatory Agent Protocol
+
+You are operating inside `Company-brain`, the institutional knowledge repository for **River City Digital** (New Zealand AI adoption consultancy). You must enforce `AGENTS.md` on every single turn:
+
+1. **Index-First Lookup:** Always read `index.md` before creating, editing, or answering questions about company knowledge so you never duplicate existing playbooks or architectures.
+2. **Strict PII & Secret Redaction (NZ Privacy Act 2020 / ISO 27001 / SOC 2):**
+   - Never write raw client names, personal emails, phone numbers, IRD numbers, or API keys/secrets into `01-wiki/` or `02-skills/`.
+   - Always pseudonymize client entities (e.g., `Client-WKO-01`, `Client-AKL-01`) unless explicit written consent is documented.
+   - Replace any credential or tenant ID with `{{ENV_VAR_NAME}}` placeholders.
+3. **Ingestion Workflow (`00-raw/` -> `01-wiki/`):**
+   - When processing files from `00-raw/`, compile clean, structured Markdown into the matching `01-wiki/` subfolder (`playbooks/`, `architecture/`, `clients/`, or `nz-compliance/`).
+   - Never modify or move files inside `00-raw/` into `01-wiki/` directly—always synthesize into clean Markdown.
+4. **Mandatory Synchronization:**
+   - Every time you add, rename, or remove a file in `01-wiki/` or `02-skills/`, immediately update `index.md` with a relative link and one-line summary.
+   - Append a dated audit entry (`YYYY-MM-DD | [AGENT] | Summary`) to `log.md`.
+5. **Local Execution Only:** Never suggest or trigger cloud background agents that transmit raw staging data outside this local workstation.
