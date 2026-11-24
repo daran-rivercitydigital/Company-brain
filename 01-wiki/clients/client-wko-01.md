@@ -3,10 +3,11 @@
 > **Pseudonym:** Client-WKO-01 | **Compiled:** 2026-11-23  
 > **Vertical:** Accountancy and advisory, Waikato, New Zealand  
 > **Engagement:** Bespoke Workflow Friction Map pilot, preceding Founding Partners  
-> **Source status as of 20 November 2026:** Draft services agreement under review; fee not yet fixed  
-> **Governing baseline:** [Master Business Architecture](../playbooks/rcd-master-business-architecture.md)
+> **Source status:** Unsigned WFM services agreement draft (internal draft v0.4; file labelled Pilot v1). Commercial scope is draft. Tier and price are provisional in the file and are not adopted. Legal, privacy and insurance terms are open. Fee not fixed  
+> **Governing baseline:** [Master Business Architecture](../playbooks/rcd-master-business-architecture.md)  
+> **Contract model:** [Services Agreement Baseline](../playbooks/services-agreement-baseline.md)
 
-The legal name, agreement reference and personal contacts from the source document are omitted. No written consent to publish the customer identity is recorded.
+The legal name, agreement reference, sponsor name and personal contacts from the source are omitted. No written consent to publish the customer identity is recorded. Signature blocks in the source are blank.
 
 ## 1. Cohort position
 
@@ -22,19 +23,44 @@ Client-WKO-01 is the Pilot Customer. It is not Customer 1 and not a Founding Par
 
 ## 2. Data sovereignty and processing
 
-No explicit New Zealand onshore data-residency requirement is recorded for this customer.
+The unsigned Pilot draft sets the processing location for this engagement to **New Zealand**. That is an engagement rule for the Pilot WFM, not a company-wide hosting standard. The specific Microsoft 365 tenant is not named in the source and must not be written into the wiki. Confirm the tenant region matches this New Zealand commitment before customer evidence is stored.
 
 * The Pilot must use the approved WFM environment in the [technology stack](../architecture/technology-stack-requirements.md).
-* WFM evidence stays in the RCD-owned Microsoft 365 environment.
-* Customer data must not be placed in public consumer AI services.
+* The draft names the approved tools: Microsoft Forms for the survey, Power Automate for orchestration, SharePoint and OneDrive for restricted evidence, Excel for calculations, and PowerPoint or PDF for outputs, all in the RCD-owned Microsoft 365 environment.
+* No approved AI service is named. Customer data must not be placed in public consumer AI services or used to train public models. Decide whether any AI service is used for grouping or drafting before kick-off.
+* Survey responses stay identifiable to RCD for clarification. Leadership does not receive respondent-level data. The report does not name respondents or attribute comments.
+* WFM evidence is for organisational workflow analysis and must not be used to assess individual employee performance.
+* No production-system credentials or unrestricted customer or client datasets are in scope unless a written change request approves them.
 * If a later PoV or implementation needs a non-Microsoft runtime, record the hosting region and obtain customer acceptance before Confidential data is introduced.
-* Raw assessment evidence is deleted no later than 30 days after completion, or after the end date if the engagement ends early, subject to documented lawful, dispute, security or backup exceptions. Record the deletion date in a data close-out confirmation. This 30-day rule is the standard for every later WFM as well.
+* Raw assessment evidence is deleted no later than 30 days after completion, or after the end date if the engagement ends early, subject to documented lawful, dispute, security or backup exceptions. Record the deletion date in a data close-out confirmation. Complete that close-out before any transfer of the business. This 30-day rule is the standard for every later WFM as well.
+* The draft notifies the customer only after a confirmed incident and does not require a post-incident review. That is narrower than the [control baseline](../nz-compliance/privacy-security-ai-controls.md) and is not adopted as the RCD standard.
 
 ## 3. Commercial shape
 
-About 12 people invited. Up to three detailed Opportunity Cards plus a lightweight backlog. Cards may include estimated implementation effort and indicative cost, and those figures are not a quotation. Two staff interviews and one executive interview, 15 minutes each. One Executive Review Workshop of up to 60 minutes carries the Joint Investment Gate.
+The draft scope, which matches the architecture's Pilot shape:
 
-The contracted fee was not fixed in the architecture. Set it by effort and value before signing, then calculate expected margin using founder labour at $125/hour and direct cost modelled at up to 5% of the fee. Remove any list-price or Founding Partner wording from the agreement before signature.
+* About 12 people invited. The named list was marked received in the draft. Do not copy participant names into the wiki. The plain-language summary also says all staff may be invited. Reconcile "12" and "all staff" before signature.
+* Included functions are open to all teams. Expected survey effort is 10–15 minutes.
+* A 30-minute kick-off. Up to three detailed Opportunity Cards plus a lightweight backlog. Two staff interviews and one executive interview, 15 minutes each. One Executive Review Workshop of up to 60 minutes carries the investment decision.
+* Cards may include the problem, workflow summary, business impact, estimated implementation effort, indicative implementation cost, recommended next action, priority and expected benefits. Effort and cost figures are not a quotation and commit neither party to implementation.
+* Exclusions include a full activity census, treating every suggestion as an investment case, production access or build, security or privacy assessment, legal or regulatory assurance, savings guarantees, pass-through costs, and any later-stage service.
+* Extra interviews, extra cards, a longer workshop or any excluded item needs a written change request covering reason, scope, fee, timing, privacy and security impact, and both approvals.
+* The customer appoints a sponsor, introduces the survey, confirms it may share the data, reviews facts promptly, and makes its own business, employment, professional, regulatory and investment decisions. RCD does not give legal, tax, accounting, insurance, employment or financial advice.
+* Indicative pathway after the pack: the customer's own investment decision, then a separate agreement for any PoV, implementation or Managed AI Operations. A retainer or training route may be discussed if the evidence shows that need. Government co-funding is not assumed and is not a pricing input.
+* Indicative timetable in the draft, all estimates: kick-off and survey open on the same day, survey open for 10 business days, consolidation and pack within 5 business days after close, then a review period, then the workshop within 5 business days after that review. The draft also contains calendar dates in November and December 2026. Those dates are not commitments.
+* Assessment Ready Date is the first business day after signature or written acceptance, confirmation of sponsor, scope and invite list, and completion of the information-handling preconditions. For this engagement it does not depend on incorporation, insurance or an upfront payment.
+
+The contracted fee was not fixed. Set it by effort and value before signing, then calculate expected margin using founder labour at $125/hour and direct cost modelled at up to 5% of the fee. Remove any list-price or Founding Partner wording from the agreement before signature.
+
+The same draft still contains lines that contradict that position and must not be used:
+
+| Draft line | Why it is not adopted |
+| --- | --- |
+| Header marks Founding Partner as "Yes (Pilot)", and clause 9 applies a 12-month 20% discount and feedback duties | v8.2: the Pilot is not a Founding Partner and receives no discount |
+| Micro list price $1,250 + GST and a $250 discount | v8.2 Micro book is $1,500 + GST. The Pilot does not use a tier price. $1,250 is not a book price |
+| Stop-partway table values every stage at $0 until the executive review, then 100% at $1,000 | The mechanism (nothing due until the executive review, then the full fee) matches the proposed Pilot term. $1,000 is not the fee |
+| Contracting party named as the limited company, with assignment only by consent | The 9–10 November drafts named a sole trader and said later work would be papered again after incorporation. Who contracts remains Open |
+| Insurance sentence says cover has not been promised for this engagement | The disclosure is incomplete. The customer still needs a clear written acknowledgement that PI and cyber cover are not held |
 
 ## 4. Exceptions against the master standard
 
@@ -68,7 +94,7 @@ Proposed terms that apply to this Pilot only until the founder approves, amends 
 * Remove Founding Partner language and any list price from the agreement.
 * Confirm with a New Zealand lawyer and accountant who contracts while RCD is pre-incorporation, and how novation to the incorporated entity will work.
 * Complete the insurance disclosure so the customer can acknowledge that PI and cyber cover are not yet held.
-* Resolve internal agreement inconsistencies called out in the source: review period of 10 business days versus 5, workshop timing, missing clauses, invitee count versus "all staff", and pack naming.
+* Resolve internal agreement inconsistencies: the definitions set a 10 Business Day Review Period, while the timetable and the acceptance table set 5 Business Days; the correction window is also described as within 5 Business Days after pack delivery and before the workshop. Acceptance of the pack does not trigger the invoice. The invoice follows the Executive Review Workshop. Workshop attendance does not extend the Review Period.
 * Obtain qualified New Zealand review of confidentiality, survey notice and consent, processing location, the approved AI service, GST and permitted use.
 * Confirm the Pilot does not delay Customer 1.
 
