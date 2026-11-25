@@ -11,4 +11,5 @@
 * **2026-11-25 | [GEMINI-COMPILER]** | **Created Compliance Schedule:** Drafted standalone Privacy & Data Processing Baseline (`01-wiki/nz-compliance/privacy-data-processing-schedule.md`, `RCD-PDS-001`) per `WFM-001` (`CE-003`) pre-Customer 2 requirement; updated `index.md`.
 * **2026-11-25** — `[SKILL-001 Mode A]` Ingested `RCD_WFM_Primary_Friction_Record_Data_Standard` into `01-wiki/architecture/wfm-primary-friction-record-standard.md` (`WFM-STD-PFR-001`); zero PII/secrets detected; updated `index.md`.
 * **2026-11-25 | [GEMINI-COMPILER]** | **Created Agent Skill (`SKILL-002`):** Added reusable session handover and restart prompt (`02-skills/session-restart-prompt.md`) and updated `index.md`.
+* **2026-11-25 | [GEMINI-COMPILER]** | **Created Agent Skill (`SKILL-003`):** Built pre-sales discovery scoring, gate validation, and commercial routing skill (`02-skills/client-discovery-audit.md`); updated `index.md`.
 
