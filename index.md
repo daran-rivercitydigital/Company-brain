@@ -22,6 +22,8 @@
 ### Architecture (`01-wiki/architecture/`)
 
 * [Technology Stack Requirements](./01-wiki/architecture/technology-stack-requirements.md) — Microsoft-first operating stack, GitHub control plane, and provisional PoV runtimes including Replit, Vercel and Supabase.
+* [Workflow Friction Map: Primary Friction Record Data Standard](./01-wiki/architecture/wfm-primary-friction-record-standard.md) — Logical schema, friction statement standard, lifecycle stages, and deterministic AI/calculation controls for WFM MVP (`WFM-STD-PFR-001`).
+
 
 ### Clients (`01-wiki/clients/`)
 

@@ -9,3 +9,5 @@
 * **2026-11-23 | [AGENT]** | Added always-on Cursor rule `.cursor/rules/company-brain.mdc` encoding index-first lookup, PII/secret redaction, raw-to-wiki synthesis, index/log sync, and local-only execution.
 * **2026-11-25 | [GEMINI-COMPILER]** | **Batch 2 Ingestion & Delta-Merge:** Compiled Prospect Qualification Sheet, Standing Services Agreement (v0.2), and WFM-001 Exception Register (v0.2) into `01-wiki/playbooks/` (3 new articles); delta-merged sanitized Pilot WFM scope (`RCD-WFM-ENG-0008`) into `01-wiki/clients/client-wko-01.md`; updated `index.md`.
 * **2026-11-25 | [GEMINI-COMPILER]** | **Created Compliance Schedule:** Drafted standalone Privacy & Data Processing Baseline (`01-wiki/nz-compliance/privacy-data-processing-schedule.md`, `RCD-PDS-001`) per `WFM-001` (`CE-003`) pre-Customer 2 requirement; updated `index.md`.
+* **2026-11-25** — `[SKILL-001 Mode A]` Ingested `RCD_WFM_Primary_Friction_Record_Data_Standard` into `01-wiki/architecture/wfm-primary-friction-record-standard.md` (`WFM-STD-PFR-001`); zero PII/secrets detected; updated `index.md`.
+
