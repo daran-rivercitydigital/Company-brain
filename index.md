@@ -18,12 +18,22 @@
 * [Standing Services Agreement Commercial Baseline](./01-wiki/playbooks/standing-services-agreement-baseline.md) — Master services contract rules, 50/50 payment defaults, 10-day acceptance, AI/privacy controls, and IP protection.
 * [WFM-001 Controlled Exceptions & Micro-Tier Margin Model](./01-wiki/playbooks/wfm-pilot-exceptions-and-margin.md) — Pilot exceptions (`CE-001` to `CE-003`), 5-hour Micro-tier unit economics, and pre-launch legal/accounting items.
 * [Commercial Introduction, Positioning & Customer FAQ](./01-wiki/playbooks/commercial-intro-and-positioning.md) — Customer-facing value proposition, five-stage delivery model, published starting pricing, Founding Partner 20% offer, and pre-sales FAQ guardrails.
+* [Workflow Friction Assessment (WFM v0.2) — Standard Operational Runbook](./01-wiki/playbooks/wfm-standard-operational-runbook.md) — Step-by-step operator playbook for creating engagements, distributing pre-filled surveys, running Stage 2 AI synthesis, facilitating the executive decision gate, and executing the 10-day post-acceptance data purge.
+* [Replit PoV Build and Cursor Migration Guide](./01-wiki/playbooks/replit-pov-build-and-cursor-migration.md) — Plain-English setup, portability rules, foundational `replit.md`, standard kick-off/migration prompts, and readiness checklist for transitioning Replit PoVs into Cursor IDE.
+* [RCD Application Foundation Setup Guide (`rcd-app-foundation`)](./01-wiki/playbooks/rcd-application-foundation-setup-guide.md) — Operational setup guide for creating the private `rcd-app-foundation` GitHub template repository, `.cursor/rules/` policies, and Cursor/Replit baseline controls.
+
 
 
 ### Architecture (`01-wiki/architecture/`)
 
 * [Technology Stack Requirements](./01-wiki/architecture/technology-stack-requirements.md) — Microsoft-first operating stack, GitHub control plane, and provisional PoV runtimes including Replit, Vercel and Supabase.
 * [Workflow Friction Map: Primary Friction Record Data Standard](./01-wiki/architecture/wfm-primary-friction-record-standard.md) — Logical schema, friction statement standard, lifecycle stages, and deterministic AI/calculation controls for WFM MVP (`WFM-STD-PFR-001`).
+* [Workflow Friction Assessment (WFM v0.2.2) — Master System & Survey Specification](./01-wiki/architecture/wfm-master-system-and-survey-spec.md) — End-to-end technical architecture for WFM v0.2.2 on M365 Business Basic, covering the 66-question survey schema, 7 SharePoint lists, deterministic midpoint/triage logic, 5 Power Automate flows, RBAC, and the 10-day purge SOP.
+* [Workflow Friction Assessment (WFM v0.2) — Stage 2 Architectural Design & Implementation Record](./01-wiki/architecture/wfm-stage2-architectural-design-record.md) — Step-by-step Power Automate specification (`WFM_Stage2_Friction_Synthesis_v01`), privacy/anonymization gates, and Phases A–C automation roadmap.
+* [Workflow Friction Assessment (`WFM-0.2`) — Complete 66-Question Survey Schema & Branching Specification](./01-wiki/architecture/wfm-survey-questions-schema.md) — Verbatim 66-question survey instrument (`Q1–Q66`), input validations, branching logic (`Q6`, `Q41`, `Q51`), and SharePoint column mappings.
+* [PoV Application Reference Architecture](./01-wiki/architecture/pov-application-reference-architecture.md) — Reusable application-engineering standard (v1.1) for Cursor/Replit PoVs, covering modular boundaries, tenant-aware data, idempotency/replay, human approvals, 15-minute payload purge, mandatory tests, and the Vercel/Supabase change request.
+
+
 
 
 ### Clients (`01-wiki/clients/`)

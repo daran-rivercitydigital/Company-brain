@@ -13,4 +13,11 @@
 * **2026-11-25 | [GEMINI-COMPILER]** | **Created Agent Skill (`SKILL-002`):** Added reusable session handover and restart prompt (`02-skills/session-restart-prompt.md`) and updated `index.md`.
 * **2026-11-25 | [GEMINI-COMPILER]** | **Created Agent Skill (`SKILL-003`):** Built pre-sales discovery scoring, gate validation, and commercial routing skill (`02-skills/client-discovery-audit.md`); updated `index.md`.
 2026-11-25 | [AGENT] | Ingested RCD_-_Business_intro_2.pptx into 01-wiki/playbooks/commercial-intro-and-positioning.md
+2026-11-26 | [AGENT] | Ingested WFM_Master_system_and_Survey_Spec.pdf into 01-wiki/architecture/wfm-master-system-and-survey-spec.md
+2026-11-26 | [AGENT] | Ingested WFM_-_Architectural_design_and_implementation_record.pdf into 01-wiki/architecture/wfm-stage2-architectural-design-record.md
+2026-11-26 | [AGENT] | Ingested WFM_-_Standard_Operational_Runbook.pdf into 01-wiki/playbooks/wfm-standard-operational-runbook.md
+2026-11-26 | [AGENT] | Ingested Survey_questions.pdf into 01-wiki/architecture/wfm-survey-questions-schema.md
+2026-11-26 | [AGENT] | Ingested PoV_Application_Reference_architecture.pdf into 01-wiki/architecture/pov-application-reference-architecture.md
+2026-11-26 | [AGENT] | Ingested PoV_Replit_Build_and_Cursor_Migration_Guide.pdf into 01-wiki/playbooks/replit-pov-build-and-cursor-migration.md
+2026-11-26 | [AGENT] | Ingested RCD_Application_Foundation_Setup_Guide.pdf into 01-wiki/playbooks/rcd-application-foundation-setup-guide.md
 
