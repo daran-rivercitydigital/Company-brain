@@ -30,6 +30,8 @@
 ### NZ Compliance (`01-wiki/nz-compliance/`)
 
 * [Privacy, Security and AI Control Baseline](./01-wiki/nz-compliance/privacy-security-ai-controls.md) — Classification, retention, access, residency, AI governance, and incident targets. Not a certification claim.
+* [Privacy & Data Processing Baseline (`RCD-PDS-001`)](./01-wiki/nz-compliance/privacy-data-processing-schedule.md) — Standalone NZ Privacy Act 2020, ISO 27001, and SOC 2 data processing schedule for Customer 2+.
+
 
 ## 02-skills (Agent Prompts & SOPs)
 
