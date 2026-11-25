@@ -108,3 +108,11 @@ These Pilot terms are candidates for the general WFM standard. Validate them at 
 * Acceptance: written notice of material non-conformance within the review period, deemed acceptance at the end of it. Disagreement with a professional judgement or ranking is not a non-conformance.
 * A change-control record is required for extra interviews, extra Opportunity Cards, a longer workshop or any excluded item.
 * Disputes: notice, a good-faith meeting within five business days, then mediation in New Zealand before court proceedings.
+
+## Pilot Engagement Baseline (`RCD-WFM-ENG-0008` — Draft v0.4)
+* **Engagement Type:** Workflow Friction Map (WFM) — Micro Tier, Founding Partner Pilot (20% discount; 12-month feedback commitment).
+* **Scope & Limits:** Up to 12 invited staff across all functions (10–15 min survey), 30-min kick-off, up to 3 detailed Opportunity Cards, targeted clarification (up to 2 staff + 1 executive @ 15 min each), and one 60-min Executive Review Workshop.
+* **Approved Tooling & Residency:** Microsoft Forms, Power Automate, SharePoint/OneDrive, Excel, PowerPoint/PDF within RCD's NZ-hosted Microsoft 365 tenant. Zero public AI tools.
+* **Data Retention:** Raw survey responses and working files deleted within **30 days** of completion, confirmed via Data Close-Out Confirmation.
+* **Commercial & Exception Posture:** Operating under Controlled Exceptions `CE-001` (100% invoiced post-Executive Review Workshop, 14-day terms), `CE-002` (sole trader / entity transition alignment), and `CE-003` (written PI/Cyber insurance disclosure).
+

@@ -14,6 +14,10 @@
 
 * [Second Brain Architecture & Setup Record](./01-wiki/playbooks/second-brain-architecture.md) — Official ISO 27001 / SOC 2 aligned architecture and setup record for this repository.
 * [RCD Master Business Architecture](./01-wiki/playbooks/rcd-master-business-architecture.md) — Current operating model, product catalogue, provisional price book, gates and decision standards (source v8.2).
+* [Prospect Qualification & Meeting Validation](./01-wiki/playbooks/prospect-qualification-validation.md) — Pre-sales boundary rules, pass/fail qualification gates, and commercial routing matrix.
+* [Standing Services Agreement Commercial Baseline](./01-wiki/playbooks/standing-services-agreement-baseline.md) — Master services contract rules, 50/50 payment defaults, 10-day acceptance, AI/privacy controls, and IP protection.
+* [WFM-001 Controlled Exceptions & Micro-Tier Margin Model](./01-wiki/playbooks/wfm-pilot-exceptions-and-margin.md) — Pilot exceptions (`CE-001` to `CE-003`), 5-hour Micro-tier unit economics, and pre-launch legal/accounting items.
+
 
 ### Architecture (`01-wiki/architecture/`)
 
