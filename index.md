@@ -38,3 +38,5 @@
 ## 02-skills (Agent Prompts & SOPs)
 
 * [Ingest RCD Internal Documentation](./02-skills/ingest-rcd-doc.md) — Mandatory sequence for sanitizing SharePoint exports from `00-raw/` into the wiki.
+* [Session Handover & External Compiler Restart Prompt (`SKILL-002`)](./02-skills/session-restart-prompt.md) — Copy-pasteable prompt for restarting batch ingestion sessions in external LLM tools with full architectural context.
+
