@@ -12,4 +12,5 @@
 * **2026-11-25** — `[SKILL-001 Mode A]` Ingested `RCD_WFM_Primary_Friction_Record_Data_Standard` into `01-wiki/architecture/wfm-primary-friction-record-standard.md` (`WFM-STD-PFR-001`); zero PII/secrets detected; updated `index.md`.
 * **2026-11-25 | [GEMINI-COMPILER]** | **Created Agent Skill (`SKILL-002`):** Added reusable session handover and restart prompt (`02-skills/session-restart-prompt.md`) and updated `index.md`.
 * **2026-11-25 | [GEMINI-COMPILER]** | **Created Agent Skill (`SKILL-003`):** Built pre-sales discovery scoring, gate validation, and commercial routing skill (`02-skills/client-discovery-audit.md`); updated `index.md`.
+2026-11-25 | [AGENT] | Ingested RCD_-_Business_intro_2.pptx into 01-wiki/playbooks/commercial-intro-and-positioning.md
 

@@ -17,6 +17,7 @@
 * [Prospect Qualification & Meeting Validation](./01-wiki/playbooks/prospect-qualification-validation.md) — Pre-sales boundary rules, pass/fail qualification gates, and commercial routing matrix.
 * [Standing Services Agreement Commercial Baseline](./01-wiki/playbooks/standing-services-agreement-baseline.md) — Master services contract rules, 50/50 payment defaults, 10-day acceptance, AI/privacy controls, and IP protection.
 * [WFM-001 Controlled Exceptions & Micro-Tier Margin Model](./01-wiki/playbooks/wfm-pilot-exceptions-and-margin.md) — Pilot exceptions (`CE-001` to `CE-003`), 5-hour Micro-tier unit economics, and pre-launch legal/accounting items.
+* [Commercial Introduction, Positioning & Customer FAQ](./01-wiki/playbooks/commercial-intro-and-positioning.md) — Customer-facing value proposition, five-stage delivery model, published starting pricing, Founding Partner 20% offer, and pre-sales FAQ guardrails.
 
 
 ### Architecture (`01-wiki/architecture/`)
