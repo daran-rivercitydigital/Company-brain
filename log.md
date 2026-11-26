@@ -35,3 +35,7 @@
 - **Output:** Created `02-skills/client-discovery-audit.md` (`SKILL-002`)
 - **Updates:** Registered `SKILL-002` in `index.md`; completed Section 06 Priority 4 deliverable.
 - **Compliance Check:** Enforces strict `Client-XXX-00` pseudonymization, PII/secret stripping, and `00-raw/` purge protocol.
+## [2026-11-26] lint | Full Master Index Sync (25 Active Knowledge & Skill Files)
+- **Scope:** Audited all five subdirectories (`01-wiki/playbooks/`, `01-wiki/architecture/`, `01-wiki/clients/`, `01-wiki/nz-compliance/`, `02-skills/`) against `index.md`.
+- **Updates:** Registered 13 newly ingested/created documents in `index.md` (`commercial-intro-and-positioning.md`, `nz-sme-ai-adoption.md`, `prospect-qualification-validation.md`, `rcd-application-foundation-setup-guide.md`, `replit-pov-build-and-cursor-migration.md`, `standing-services-agreement-baseline.md`, `wfm-pilot-exceptions-and-margin.md`, `wfm-standard-operational-runbook.md`, `pov-application-reference-architecture.md`, `second-brain-master-reference.md`, `wfm-master-system-and-survey-spec.md`, `wfm-primary-friction-record-standard.md`, `wfm-stage2-architectural-design-record.md`, `wfm-survey-questions-schema.md`, `privacy-data-processing-schedule.md`, `session-restart-prompt.md`, `client-discovery-audit.md`) and normalized `client-wko-01.md` path casing.
+- **Compliance Check:** Confirmed zero PII, zero real client names, and zero secrets across all 25 indexed paths.

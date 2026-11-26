@@ -10,48 +10,53 @@
 
 ## 01-wiki (Compiled Knowledge Base)
 
-### Playbooks (`01-wiki/playbooks/`)
+## 01-wiki/playbooks/ — Methodologies & Operational Playbooks
 
-* [Second Brain Architecture & Setup Record](./01-wiki/playbooks/second-brain-architecture.md) — Official ISO 27001 / SOC 2 aligned architecture and setup record for this repository.
-* [RCD Master Business Architecture](./01-wiki/playbooks/rcd-master-business-architecture.md) — Current operating model, product catalogue, provisional price book, gates and decision standards (source v8.2).
-* [Prospect Qualification & Meeting Validation](./01-wiki/playbooks/prospect-qualification-validation.md) — Pre-sales boundary rules, pass/fail qualification gates, and commercial routing matrix.
-* [Standing Services Agreement Commercial Baseline](./01-wiki/playbooks/standing-services-agreement-baseline.md) — Master services contract rules, 50/50 payment defaults, 10-day acceptance, AI/privacy controls, and IP protection.
-* [WFM-001 Controlled Exceptions & Micro-Tier Margin Model](./01-wiki/playbooks/wfm-pilot-exceptions-and-margin.md) — Pilot exceptions (`CE-001` to `CE-003`), 5-hour Micro-tier unit economics, and pre-launch legal/accounting items.
-* [Commercial Introduction, Positioning & Customer FAQ](./01-wiki/playbooks/commercial-intro-and-positioning.md) — Customer-facing value proposition, five-stage delivery model, published starting pricing, Founding Partner 20% offer, and pre-sales FAQ guardrails.
-* [Workflow Friction Assessment (WFM v0.2) — Standard Operational Runbook](./01-wiki/playbooks/wfm-standard-operational-runbook.md) — Step-by-step operator playbook for creating engagements, distributing pre-filled surveys, running Stage 2 AI synthesis, facilitating the executive decision gate, and executing the 10-day post-acceptance data purge.
-* [Replit PoV Build and Cursor Migration Guide](./01-wiki/playbooks/replit-pov-build-and-cursor-migration.md) — Plain-English setup, portability rules, foundational `replit.md`, standard kick-off/migration prompts, and readiness checklist for transitioning Replit PoVs into Cursor IDE.
-* [RCD Application Foundation Setup Guide (`rcd-app-foundation`)](./01-wiki/playbooks/rcd-application-foundation-setup-guide.md) — Operational setup guide for creating the private `rcd-app-foundation` GitHub template repository, `.cursor/rules/` policies, and Cursor/Replit baseline controls.
-- `01-wiki/playbooks/nz-sme-ai-adoption.md` (`PB-002`) — Flagship NZ SME AI Adoption Playbook covering the three-phase delivery methodology (Readiness Audit -> Controlled Pilot -> Governance & ROI) aligned with NZ Privacy Act 2020 controls.
+- `01-wiki/playbooks/second-brain-architecture.md` — `2026-11-23` | **Playbook** | Core three-layer architecture, agent workflows (Ingest, Query, Lint), security posture, and operating rules for the River City Digital Second Brain.
+- `01-wiki/playbooks/rcd-master-business-architecture.md` — `2026-11-23` | **Playbook** | Master business blueprint covering vision, four-layer hybrid service architecture, flagship Workflow Transformation Sprint offer, go-to-market, and 24-month financial/scaling roadmap.
+- `01-wiki/playbooks/prospect-qualification.md` — `2026-11-23` | **Playbook** | Discovery and prospect qualification framework for evaluating NZ SME fit, pain points, readiness, and commercial viability.
+- `01-wiki/playbooks/services-agreement-baseline.md` — `2026-11-23` | **Playbook** | Baseline services agreement structure, scope boundaries, commercial terms, and delivery governance for River City Digital engagements.
+- `01-wiki/playbooks/prospect-qualification-validation.md` — `2026-11-25` | **Playbook** | Validation rules, scoring gates, and qualification checkpoints confirming prospect readiness prior to Sprint commitment.
+- `01-wiki/playbooks/standing-services-agreement-baseline.md` — `2026-11-25` | **Playbook** | Master standing services agreement baseline governing ongoing client engagements, SOW structures, and liability boundaries.
+- `01-wiki/playbooks/wfm-pilot-exceptions-and-margin.md` — `2026-11-25` | **Playbook** | Operational rules for handling Workflow Manager (WFM) pilot edge-case exceptions and protecting delivery/commercial margin targets.
+- `01-wiki/playbooks/commercial-intro-and-positioning.md` — `2026-11-25` | **Playbook** | River City Digital commercial positioning, value proposition messaging, and executive introduction playbook for NZ SMEs.
+- `01-wiki/playbooks/wfm-standard-operational-runbook.md` — `2026-11-26` | **Playbook** | Standard operational runbook covering day-to-day execution, monitoring, escalation, and support for WFM deployments.
+- `01-wiki/playbooks/replit-pov-build-and-cursor-migration.md` — `2026-11-26` | **Playbook** | Rapid Proof-of-Value (PoV) prototyping workflow in Replit and structured migration path into local Cursor/Git production repositories.
+- `01-wiki/playbooks/rcd-application-foundation-setup-guide.md` — `2026-11-26` | **Playbook** | Step-by-step setup guide for provisioning River City Digital’s standardized client application foundation (GitHub, Supabase, Vercel, environment vaults).
+- `01-wiki/playbooks/nz-sme-ai-adoption.md` — `2026-11-26` | **Playbook** | Flagship NZ SME AI Adoption Playbook (`PB-002`) detailing the three-phase delivery lifecycle (AI Readiness Audit -> Controlled Pilot -> Governance & ROI) and consultant execution checklist.
+
+---
+
+## 01-wiki/architecture/ — System Designs, Agent Blueprints & Standards
+
+- `01-wiki/architecture/technology-stack-requirements.md` — `2026-11-23` | **Architecture** | Approved technology stack requirements, runtime baselines, and platform constraints for River City Digital builds.
+- `01-wiki/architecture/wfm-primary-friction-record-standard.md` — `2026-11-25` | **Architecture** | Canonical schema and data standard for capturing, classifying, and scoring primary workflow friction records during audits.
+- `01-wiki/architecture/wfm-master-system-and-survey-spec.md` — `2026-11-26` | **Architecture** | End-to-end Workflow Manager (WFM) system specification and discovery survey architecture.
+- `01-wiki/architecture/wfm-stage2-architectural-design-record.md` — `2026-11-26` | **Architecture** | Architectural Design Record (ADR) detailing Stage 2 WFM system components, data flows, and integration boundaries.
+- `01-wiki/architecture/wfm-survey-questions-schema.md` — `2026-11-26` | **Architecture** | Structured question schema, validation logic, and scoring mappings powering the WFM discovery survey engine.
+- `01-wiki/architecture/pov-application-reference-architecture.md` — `2026-11-26` | **Architecture** | Reference architecture blueprint for rapid Proof-of-Value (PoV) client applications, tenant isolation, and secret management.
+- `01-wiki/architecture/second-brain-master-reference.md` — `2026-11-26` | **Architecture** | Authoritative Second Brain Master Reference (`ARCH-001 v2.0`) documenting live GitHub/Cursor/M365 infrastructure, compliance baselines, and the Phase 6 scaling roadmap.
+
+---
+
+## 01-wiki/clients/ — Client Profiles & Engagement Summaries
+
+> *All client entries are strictly pseudonymized (`Client-XXX-00`). No real company names, contact names, or PII are permitted here.*
+
+- `01-wiki/clients/client-wko-01.md` — `2026-11-25` | **Client Profile** | Waikato SME client (`Client-WKO-01`) engagement profile, workflow audit baseline, and pilot architecture scope.
+
+---
+
+## 01-wiki/nz-compliance/ — NZ Privacy Act 2020, ISO 27001 & Security Controls
+
+- `01-wiki/nz-compliance/privacy-security-ai-controls.md` — `2026-11-23` | **Compliance** | Security, privacy, and AI governance controls mapped to NZ Privacy Act 2020, ISO 27001, and SOC 2, including data classification, retention SLAs, residency rules, and human-in-the-loop gates.
+- `01-wiki/nz-compliance/privacy-data-processing-schedule.md` — `2026-11-25` | **Compliance** | Standardized Data Processing Schedule (DPS) template governing sub-processors, AU/NZ data residency, breach notification, and NZ Privacy Act 2020 obligations.
+
+---
 
 
+## 02-skills/ — Reusable Agent Workflow SOPs
 
-### Architecture (`01-wiki/architecture/`)
-
-* [Technology Stack Requirements](./01-wiki/architecture/technology-stack-requirements.md) — Microsoft-first operating stack, GitHub control plane, and provisional PoV runtimes including Replit, Vercel and Supabase.
-* [Workflow Friction Map: Primary Friction Record Data Standard](./01-wiki/architecture/wfm-primary-friction-record-standard.md) — Logical schema, friction statement standard, lifecycle stages, and deterministic AI/calculation controls for WFM MVP (`WFM-STD-PFR-001`).
-* [Workflow Friction Assessment (WFM v0.2.2) — Master System & Survey Specification](./01-wiki/architecture/wfm-master-system-and-survey-spec.md) — End-to-end technical architecture for WFM v0.2.2 on M365 Business Basic, covering the 66-question survey schema, 7 SharePoint lists, deterministic midpoint/triage logic, 5 Power Automate flows, RBAC, and the 10-day purge SOP.
-* [Workflow Friction Assessment (WFM v0.2) — Stage 2 Architectural Design & Implementation Record](./01-wiki/architecture/wfm-stage2-architectural-design-record.md) — Step-by-step Power Automate specification (`WFM_Stage2_Friction_Synthesis_v01`), privacy/anonymization gates, and Phases A–C automation roadmap.
-* [Workflow Friction Assessment (`WFM-0.2`) — Complete 66-Question Survey Schema & Branching Specification](./01-wiki/architecture/wfm-survey-questions-schema.md) — Verbatim 66-question survey instrument (`Q1–Q66`), input validations, branching logic (`Q6`, `Q41`, `Q51`), and SharePoint column mappings.
-* [PoV Application Reference Architecture](./01-wiki/architecture/pov-application-reference-architecture.md) — Reusable application-engineering standard (v1.1) for Cursor/Replit PoVs, covering modular boundaries, tenant-aware data, idempotency/replay, human approvals, 15-minute payload purge, mandatory tests, and the Vercel/Supabase change request.
-- `01-wiki/architecture/second-brain-master-reference.md` (`ARCH-001`) — Authoritative system architecture, security posture, live environment baselines, and Phase 6 scaling roadmap (v2.0).
-
-
-
-
-### Clients (`01-wiki/clients/`)
-
-* [Client-WKO-01](./01-wiki/clients/client-wko-01.md) — Pseudonymized Waikato accountancy Pilot for the Workflow Friction Map, including open contracting exceptions.
-
-### NZ Compliance (`01-wiki/nz-compliance/`)
-
-* [Privacy, Security and AI Control Baseline](./01-wiki/nz-compliance/privacy-security-ai-controls.md) — Classification, retention, access, residency, AI governance, and incident targets. Not a certification claim.
-* [Privacy & Data Processing Baseline (`RCD-PDS-001`)](./01-wiki/nz-compliance/privacy-data-processing-schedule.md) — Standalone NZ Privacy Act 2020, ISO 27001, and SOC 2 data processing schedule for Customer 2+.
-
-
-## 02-skills (Agent Prompts & SOPs)
-
-* [Ingest RCD Internal Documentation](./02-skills/ingest-rcd-doc.md) — Mandatory sequence for sanitizing SharePoint exports from `00-raw/` into the wiki.
-* [Session Handover & External Compiler Restart Prompt (`SKILL-002`)](./02-skills/session-restart-prompt.md) — Copy-pasteable prompt for restarting batch ingestion sessions in external LLM tools with full architectural context.
-* [Pre-Sales Discovery Scoring & Commercial Routing (`SKILL-003`)](./02-skills/client-discovery-audit.md) — Evaluates pre-sales discovery notes against the 6 evidence prompts and 7 qualification gates, selects the commercial route, and drafts pseudonymized client profiles.
-- `02-skills/client-discovery-audit.md` (`SKILL-002`) — Standardized workflow skill converting raw client discovery transcripts and audit notes into sanitized, pseudonymized `01-wiki/clients/Client-XXX-00.md` readiness assessments.
-
+- `02-skills/ingest-rcd-doc.md` — `2026-11-25` | **Skill** | Standard operating procedure (`SKILL-001`) for ingesting raw documents from `00-raw/` into sanitized `01-wiki/` markdown files with mandatory PII/secret redaction.
+- `02-skills/session-restart-prompt.md` — `2026-11-25` | **Skill** | Standardized context-bootstrapping prompt and workflow for re-initializing AI agent sessions cleanly against `Company-brain`.
+- `02-skills/client-discovery-audit.md` — `2026-11-26` | **Skill** | Standardized workflow skill (`SKILL-002`) converting raw client discovery transcripts and audit notes into sanitized, pseudonymized `01-wiki/clients/Client-XXX-00.md` readiness assessments.
