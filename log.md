@@ -25,3 +25,8 @@
 - **Output:** Created `01-wiki/architecture/second-brain-master-reference.md` (`ARCH-001`)
 - **Updates:** Registered `ARCH-001` in `index.md`; confirmed completion of Priority 1 batch ingestion of `RCD Internal` IP.
 - **Compliance Check:** Verified zero PII, zero client identifiers, and zero credentials written to repository.
+## [2026-11-26] create | PB-002: Flagship NZ SME AI Adoption Playbook
+- **Source:** Section 06 Priority 2 specification (`ARCH-001`) synthesized with `01-wiki/nz-compliance/privacy-security-ai-controls.md`
+- **Output:** Created `01-wiki/playbooks/nz-sme-ai-adoption.md` (`PB-002`)
+- **Updates:** Registered `PB-002` in `index.md`; completed Section 06 Priority 2 deliverable.
+- **Compliance Check:** Verified zero PII, zero client identifiers, and zero secrets included.

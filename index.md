@@ -21,6 +21,7 @@
 * [Workflow Friction Assessment (WFM v0.2) — Standard Operational Runbook](./01-wiki/playbooks/wfm-standard-operational-runbook.md) — Step-by-step operator playbook for creating engagements, distributing pre-filled surveys, running Stage 2 AI synthesis, facilitating the executive decision gate, and executing the 10-day post-acceptance data purge.
 * [Replit PoV Build and Cursor Migration Guide](./01-wiki/playbooks/replit-pov-build-and-cursor-migration.md) — Plain-English setup, portability rules, foundational `replit.md`, standard kick-off/migration prompts, and readiness checklist for transitioning Replit PoVs into Cursor IDE.
 * [RCD Application Foundation Setup Guide (`rcd-app-foundation`)](./01-wiki/playbooks/rcd-application-foundation-setup-guide.md) — Operational setup guide for creating the private `rcd-app-foundation` GitHub template repository, `.cursor/rules/` policies, and Cursor/Replit baseline controls.
+- `01-wiki/playbooks/nz-sme-ai-adoption.md` (`PB-002`) — Flagship NZ SME AI Adoption Playbook covering the three-phase delivery methodology (Readiness Audit -> Controlled Pilot -> Governance & ROI) aligned with NZ Privacy Act 2020 controls.
 
 
 
