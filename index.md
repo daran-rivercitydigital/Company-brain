@@ -32,6 +32,7 @@
 * [Workflow Friction Assessment (WFM v0.2) — Stage 2 Architectural Design & Implementation Record](./01-wiki/architecture/wfm-stage2-architectural-design-record.md) — Step-by-step Power Automate specification (`WFM_Stage2_Friction_Synthesis_v01`), privacy/anonymization gates, and Phases A–C automation roadmap.
 * [Workflow Friction Assessment (`WFM-0.2`) — Complete 66-Question Survey Schema & Branching Specification](./01-wiki/architecture/wfm-survey-questions-schema.md) — Verbatim 66-question survey instrument (`Q1–Q66`), input validations, branching logic (`Q6`, `Q41`, `Q51`), and SharePoint column mappings.
 * [PoV Application Reference Architecture](./01-wiki/architecture/pov-application-reference-architecture.md) — Reusable application-engineering standard (v1.1) for Cursor/Replit PoVs, covering modular boundaries, tenant-aware data, idempotency/replay, human approvals, 15-minute payload purge, mandatory tests, and the Vercel/Supabase change request.
+- `01-wiki/architecture/second-brain-master-reference.md` (`ARCH-001`) — Authoritative system architecture, security posture, live environment baselines, and Phase 6 scaling roadmap (v2.0).
 
 
 

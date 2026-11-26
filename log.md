@@ -20,4 +20,8 @@
 2026-11-26 | [AGENT] | Ingested PoV_Application_Reference_architecture.pdf into 01-wiki/architecture/pov-application-reference-architecture.md
 2026-11-26 | [AGENT] | Ingested PoV_Replit_Build_and_Cursor_Migration_Guide.pdf into 01-wiki/playbooks/replit-pov-build-and-cursor-migration.md
 2026-11-26 | [AGENT] | Ingested RCD_Application_Foundation_Setup_Guide.pdf into 01-wiki/playbooks/rcd-application-foundation-setup-guide.md
-
+## [2026-11-26] ingest | ARCH-001: Second Brain Master Reference v2.0
+- **Source:** `RCD-Second-Brain-Master-Reference-v2.docx` (`RCD-ARCH-001 v2.0`)
+- **Output:** Created `01-wiki/architecture/second-brain-master-reference.md` (`ARCH-001`)
+- **Updates:** Registered `ARCH-001` in `index.md`; confirmed completion of Priority 1 batch ingestion of `RCD Internal` IP.
+- **Compliance Check:** Verified zero PII, zero client identifiers, and zero credentials written to repository.
