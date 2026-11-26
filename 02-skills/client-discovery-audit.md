@@ -1,64 +1,133 @@
-# Skill: Pre-Sales Discovery Scoring & Commercial Routing (`SKILL-003`)
+---
+id: SKILL-002
+title: Client Discovery & AI Readiness Audit Compiler
+category: skills
+status: active
+version: 1.0
+effective_date: 2026-11-26
+compliance_scope: [NZ-Privacy-Act-2020, ISO-27001-2022, SOC-2]
+related_docs:
+  - 01-wiki/playbooks/nz-sme-ai-adoption.md
+  - 01-wiki/nz-compliance/privacy-security-ai-controls.md
+  - 02-skills/ingest-rcd-doc.md
+owner: Chief of Staff & AI Systems Architect
+---
 
-> **Skill ID:** SKILL-003 | **Version:** 1.0 | **Effective Date:** 2026-11-25  
-> **Upstream Playbooks:**  
-> * [Prospect Qualification & Meeting Validation](../01-wiki/playbooks/prospect-qualification-validation.md)  
-> * [Standing Services Agreement Commercial Baseline](../01-wiki/playbooks/standing-services-agreement-baseline.md)  
-> * [WFM-001 Controlled Exceptions & Micro-Tier Margin Model](../01-wiki/playbooks/wfm-pilot-exceptions-and-margin.md)  
-> * [Privacy & Data Processing Baseline (`RCD-PDS-001`)](../01-wiki/nz-compliance/privacy-data-processing-schedule.md)
+# `SKILL-002`: Client Discovery & AI Readiness Audit Compiler
+
+## 1. Purpose & Trigger Conditions
+Use this skill whenever raw client discovery notes, stakeholder interview transcripts, system inventories, or Phase 1 AI Readiness Audit materials are placed in `00-raw/` (or provided directly in a sanitized compilation prompt).
+
+* **Primary Objective:** Transform unstructured client discovery inputs into a standardized, pseudonymized client knowledge file (`01-wiki/clients/Client-XXX-00.md`) and a scored Phase 1 Opportunity Matrix aligned with `PB-002`.
+* **Mandatory Security Gate:** Enforce strict de-identification and immediate raw-file purging so zero client PII, commercial secrets, or credentials ever enter Git history.
 
 ---
 
-## 1. Trigger & Purpose
-Run this skill whenever raw discovery call notes, qualification sheets, or pre-sales intake transcripts are staged in `00-raw/` (or pasted in a local/approved session). The agent evaluates commercial fit, flags NZ Privacy Act / delivery risks, selects the commercial route, and drafts a pseudonymized client record ready for **Founder Sign-Off (`Proceed` / `Revise` / `Stop`)**.
+## 2. Pseudonymization & Sanitization Rules (Zero-Tolerance Gate)
+Before writing a single line to `01-wiki/clients/`, `index.md`, or `log.md`, strip and transform all sensitive identifiers:
+
+1. **Client Entity Code (`Client-XXX-00`):**
+   * Assign a 3-letter region/sector code + 2-digit sequence number (e.g., `Client-WKO-01` for Waikato client #1, `Client-AKL-02`, `Client-TRD-01`).
+   * Verify `index.md` first so existing client codes are reused rather than duplicated.
+2. **Strip All Direct & Indirect PII:**
+   * Replace real company names, trading names, and subsidiary names with `Client-XXX-00`.
+   * Replace all personal names with role titles (`[Managing Director]`, `[Operations Manager]`, `[Lead Estimator]`, `[Admin Coordinator]`).
+   * Redact all email addresses, phone numbers, physical street addresses, URLs/domains, NZBNs, IRD numbers, and bank/account details.
+3. **Strip All Secrets & Tenant Identifiers:**
+   * Redact API keys, tenant IDs, SharePoint site URLs, webhook endpoints, and passwords; replace with `{{ENV_VAR_NAME}}` or `[REDACTED-TENANT-ID]`.
+4. **Generalize Identifying Niche Facts:**
+   * Express revenue, staff count, and volume as bands or rounded metrics (e.g., `25–35 staff`, `~$4M–$6M annual turnover`, `~120 quotes/month`) so the entity cannot be re-identified externally.
 
 ---
 
-## 2. Hard Guardrails (Non-Negotiable)
-1. **No Free Consulting Boundary:** Never generate free diagnostic analysis, ranked opportunity cards, tool recommendations, or workflow redesigns in pre-sales outputs. Discovery establishes **fit**, **presenting problem**, and **commercial route** only.
-2. **Strict PII Redaction & Pseudonymization:** Strip all personal names, email addresses, phone numbers, street addresses, and NZBN/IRD identifiers before writing to `01-wiki/clients/`. Assign a regional pseudonym code (e.g., `Client-WKO-02`, `Client-AKL-01`, `Client-BOP-01`).
-3. **Zero Public AI / Local Execution:** Process raw discovery notes only inside approved local or privacy-mode environments.
+## 3. Step-by-Step Execution Workflow
+
+### Step 1: Intake & De-Identification Pass
+1. Read all discovery files staged in `00-raw/` (e.g., meeting transcripts, questionnaire exports, tech-stack notes).
+2. Check `index.md` to confirm whether a `Client-XXX-00` file already exists for this client.
+3. Perform the **Sanitization Pass** (Section 2) in memory before generating any repository output.
+
+### Step 2: Score AI Readiness (1–5 Scale per Dimension)
+Evaluate the client across the five `PB-002` readiness pillars based strictly on evidence in the discovery notes (mark unverified items as `TBD — Verify in Technical Audit`):
+
+| Dimension | Score (1–5) | Assessment Criteria |
+| :--- | :---: | :--- |
+| **1. Data & Document Hygiene** | `[1-5]` | Structured digital records vs. paper/siloed spreadsheets; SharePoint/folder hygiene |
+| **2. Core Tech Stack & APIs** | `[1-5]` | Cloud SaaS maturity (M365, Google Workspace, Xero, modern CRM/ERP) vs. legacy on-prem |
+| **3. Privacy & Security Posture** | `[1-5]` | MFA/Entra ID adoption, M365 permissions hygiene, NZ Privacy Act 2020 awareness |
+| **4. Leadership & Champion Buy-In** | `[1-5]` | Executive sponsorship + availability of 3–8 frontline pilot champions |
+| **5. Workflow Repeatability & ROI** | `[1-5]` | Clear, high-volume repetitive bottlenecks with measurable baseline hours/rework |
+
+### Step 3: Build the Workflow Opportunity Matrix
+Extract 3–6 candidate workflows from the discovery inputs and score each using `PB-002` rules:
+* **Baseline Volume & Time:** Tasks/week × minutes/task = weekly hours lost.
+* **Impact Score (1–5):** Direct margin, turnaround speed, or capacity unlocked.
+* **Feasibility & Compliance Score (1–5):** Ease of integration + low privacy risk (`Public` / `Internal` data preferred for Pilot #1).
+* **Recommended Track:** `Track A (M365 Native Copilot)` vs. `Track B (Custom Agentic Workflow)` vs. `Defer`.
+
+### Step 4: Write `01-wiki/clients/Client-XXX-00.md`
+Create or update `01-wiki/clients/Client-XXX-00.md` using the canonical template in **Section 4** below.
+
+### Step 5: Update `index.md`, `log.md`, and Purge `00-raw/`
+1. Add or update the entry in `index.md` under `01-wiki/clients/` (using pseudonym + sector + stage only—zero real names).
+2. Append an audit entry to `log.md`.
+3. **Delete all raw client discovery files from `00-raw/` immediately** (leaving only `.gitkeep`).
+4. Present changes to the human operator for `git diff` review and commit via GitHub Desktop.
 
 ---
 
-## 3. Execution Steps (Mandatory Sequence)
+## 4. Canonical Output Template: `01-wiki/clients/Client-XXX-00.md`
 
-### Step 1: Context Check
-1. Read `index.md` to verify existing client codes in `01-wiki/clients/` and avoid duplicate entries.
-2. Read the raw discovery notes provided.
+```markdown
+---
+id: Client-XXX-00
+sector: [e.g., Commercial Trades / Field Services / Agribusiness / Professional Services]
+region: [e.g., Waikato / Bay of Plenty / Auckland]
+size_band: [e.g., 15-30 staff]
+engagement_stage: [Discovery | Phase-1-Audit | Phase-2-Pilot | Phase-3-Scale]
+compliance_tier: [Standard-NZPA2020 | High-Sensitivity]
+last_updated: YYYY-MM-DD
+related_docs:
+  - 01-wiki/playbooks/nz-sme-ai-adoption.md
+  - 01-wiki/nz-compliance/privacy-security-ai-controls.md
+---
 
-### Step 2: Score the 6 Discovery Evidence Dimensions
-Evaluate the raw notes against River City Digital's six core discovery prompts and assign a confidence rating (**High**, **Medium**, **Low**, or **Missing**):
+# Client Profile: `Client-XXX-00`
 
-| Dimension | Core Question | Evidence Extracted | Confidence |
-| :--- | :--- | :--- | :--- |
-| **1. Time Friction** | Where are skilled people losing time? | `[Summarise friction]` | `High / Med / Low / Missing` |
-| **2. Outcome** | What business outcome matters most? | `[Summarise target KPI/outcome]` | `High / Med / Low / Missing` |
-| **3. Blast Radius** | Which teams, processes, or customers are affected? | `[Summarise scope]` | `High / Med / Low / Missing` |
-| **4. Urgency** | Why address this now? | `[Summarise catalyst/deadline]` | `High / Med / Low / Missing` |
-| **5. History** | What has already been tried? | `[Summarise prior attempts]` | `High / Med / Low / Missing` |
-| **6. Economics** | Is there a genuine budget and decision path? | `[Summarise budget/authority]` | `High / Med / Low / Missing` |
+## 1. Operational Context & Objectives
+- **Business Model:** [Concise, non-identifying summary of operations]
+- **Primary Pain Points:** [Top 3 operational bottlenecks identified in discovery]
+- **Strategic Goals (Next 6–12 Months):** [e.g., Reduce quoting turnaround by 70%, eliminate admin overtime]
 
-### Step 3: Evaluate Mandatory Pass/Fail Qualification Gates
-Score each gate as **PASS**, **CONDITIONAL (Needs Info)**, or **FAIL**:
-* **Gate 1 — Clear Problem & Outcome:** Business friction and desired outcome are concrete.
-* **Gate 2 — Market & Waikato/NZ Fit:** Aligns with River City Digital's target SME profile.
-* **Gate 3 — Capacity Fit:** Deliverable within current Founder capacity without breaching delivery SLAs.
-* **Gate 4 — Scope Boundary:** Can be scoped cleanly without giving away free substantive analysis.
-* **Gate 5 — Margin & Pricing Floor:** Meets standard **>= 50% gross margin** floor (or >= 40% only if an approved Founding Partner exception applies within Customer 1–3 cohort).
-* **Gate 6 — Risk & NZ Privacy Posture:** Data sensitivity is manageable under `RCD-PDS-001` (no unapproved clinical/special-category PII or cross-border blockers).
-* **Gate 7 — Decision Authority:** Economic buyer / decision path is identified.
+## 2. Current Technology Stack & Data Environment
+- **Identity & Productivity:** [e.g., Microsoft 365 Business Premium, SharePoint, Teams]
+- **Finance & Operations:** [e.g., Xero, Fergus / SimPRO / HubSpot / Custom SQL]
+- **Data Residency & Security Notes:** [e.g., AU/NZ M365 tenant; SharePoint permissions require cleanup prior to Copilot]
 
-### Step 4: Select Commercial Route
-Apply the deterministic routing logic:
-* **Workflow Friction Map (WFM) [Default]:** Select when wider evidence is needed across staff/processes, or the opportunity portfolio is unclear. Recommend tier (`Micro` <= 12 staff @ NZD 1,500 + GST standard, or larger tier per architecture).
-* **Direct-to-PoV (Exception Only):** Select **only** if the workflow is tightly bounded AND all Joint Investment Gate evidence is already proven (quantified value, owner, technical feasibility, data readiness, risks, human-in-the-loop rules, decision authority).
-* **AI Strategy Retainer:** Select when a genuine ongoing governance/advisory need is established.
-* **AI Training & Adoption:** Select when a defined team capability/upskilling need is established.
-* **No Engagement / Revisit:** Select if any critical Gate (`Gate 1`, `Gate 5`, `Gate 6`, or `Gate 7`) fails.
+## 3. AI Readiness Scorecard (`PB-002` Baseline)
 
-### Step 5: Generate Outputs & Synchronize Wiki
-1. **Create/Merge Client Profile (`01-wiki/clients/client-<region>-<nn>.md`):** Write the sanitized, pseudonymized discovery scorecard, recommended commercial route, open questions, and a pending **Founder Sign-Off Block** (`Decision: [ ] Proceed  [ ] Revise  [ ] Stop`).
-2. **Capture Meeting Validation Metrics:** Log (a) propositions immediately understood, (b) high-interest outcomes, (c) objections/risks raised, and (d) willingness-to-pay signals.
-3. **Update `index.md` & `log.md`:** Add the new client entry to `index.md` under `### Clients` and append a timestamped audit entry to `log.md`.
-4. **Confirm Purge:** Remind the Founder to delete raw discovery notes from `00-raw/` before pushing to GitHub.
+| Pillar | Score (1–5) | Key Findings & Gaps |
+| :--- | :---: | :--- |
+| Data & Document Hygiene | X/5 | ... |
+| Core Tech Stack & APIs | X/5 | ... |
+| Privacy & Security Posture | X/5 | ... |
+| Leadership & Champion Buy-In | X/5 | ... |
+| Workflow Repeatability & ROI | X/5 | ... |
+| **Composite Readiness Score** | **XX/25** | **[Ready for Track A/B Pilot | Needs Data/Permission Remediation First]** |
+
+## 4. Prioritized Workflow Opportunity Matrix
+
+| Workflow | Current Baseline | Impact (1–5) | Feasibility (1–5) | Recommended Track | Priority |
+| :--- | :--- | :---: | :---: | :--- | :---: |
+| [e.g., Automated Quote Drafting] | ~12 hrs/wk; 48h SLA | 5 | 4 | Track B (Custom Agent + HITL) | **Pilot #1** |
+| [e.g., Site Meeting & Scope Summaries] | ~6 hrs/wk | 4 | 5 | Track A (M365 Copilot) | **Quick Win** |
+
+## 5. Privacy, Security & HITL Guardrails (`privacy-security-ai-controls.md`)
+- **Data Classification Involved:** [Internal / Confidential / Restricted PII]
+- **NZ Privacy Act 2020 Controls:** [e.g., Redact customer residential addresses before LLM inference; zero-retention API enabled]
+- **Mandatory Human-in-the-Loop Gate:** [Specify who approves output before external send or ERP write]
+
+## 6. Next Actions & Open Questions
+- [ ] [Action item 1 — e.g., Run M365 SharePoint permission audit]
+- [ ] [Action item 2 — e.g., Collect 10 sanitized sample quotes for Pilot #1 benchmarking]
+```

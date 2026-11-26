@@ -30,3 +30,8 @@
 - **Output:** Created `01-wiki/playbooks/nz-sme-ai-adoption.md` (`PB-002`)
 - **Updates:** Registered `PB-002` in `index.md`; completed Section 06 Priority 2 deliverable.
 - **Compliance Check:** Verified zero PII, zero client identifiers, and zero secrets included.
+## [2026-11-26] create | SKILL-002: Client Discovery & AI Readiness Audit Compiler
+- **Source:** Section 06 Priority 4 specification (`ARCH-001`) aligned with `PB-002` and `01-wiki/nz-compliance/privacy-security-ai-controls.md`
+- **Output:** Created `02-skills/client-discovery-audit.md` (`SKILL-002`)
+- **Updates:** Registered `SKILL-002` in `index.md`; completed Section 06 Priority 4 deliverable.
+- **Compliance Check:** Enforces strict `Client-XXX-00` pseudonymization, PII/secret stripping, and `00-raw/` purge protocol.
