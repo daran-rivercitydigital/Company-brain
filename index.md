@@ -35,7 +35,7 @@
 - `01-wiki/architecture/wfm-stage2-architectural-design-record.md` — `2026-11-26` | **Architecture** | Architectural Design Record (ADR) detailing Stage 2 WFM system components, data flows, and integration boundaries.
 - `01-wiki/architecture/wfm-survey-questions-schema.md` — `2026-11-26` | **Architecture** | Structured question schema, validation logic, and scoring mappings powering the WFM discovery survey engine.
 - `01-wiki/architecture/pov-application-reference-architecture.md` — `2026-11-26` | **Architecture** | Reference architecture blueprint for rapid Proof-of-Value (PoV) client applications, tenant isolation, and secret management.
-- `01-wiki/architecture/second-brain-master-reference.md` — `2026-11-26` | **Architecture** | Authoritative Second Brain Master Reference (`ARCH-001 v2.0`) documenting live GitHub/Cursor/M365 infrastructure, compliance baselines, and the Phase 6 scaling roadmap.
+- `01-wiki/architecture/second-brain-master-reference.md` — `2026-11-26` | **Architecture** | Authoritative Second Brain Master Reference (`ARCH-001 v2.1`) documenting live GitHub/Cursor/M365/Supabase infrastructure, compliance baselines, 25-file production tree, and completed Phase 6 P1–P5 roadmap.
 
 ---
 

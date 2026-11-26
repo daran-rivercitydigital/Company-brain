@@ -43,3 +43,8 @@
 - **Validation:** Executed 3-scenario cross-wiki Brain Test across `client-wko-01.md`, `wfm-standard-operational-runbook.md`, `nz-sme-ai-adoption.md`, and `privacy-security-ai-controls.md` — 100% alignment confirmed.
 - **Updates:** Updated `02-skills/session-restart-prompt.md` (`v1.1`) to load `01-wiki/architecture/second-brain-master-reference.md` (`ARCH-001`) alongside `rcd-master-business-architecture.md` at session start.
 - **Compliance Check:** Verified zero PII, zero secrets, and clean `00-raw/` staging directory.
+## [2026-11-26] update | ARCH-001 v2.1 Synchronization (`second-brain-master-reference.md`)
+- **Source:** `RCD-Second-Brain-Master-Reference-v2.1.docx` (`RCD-ARCH-001 v2.1`)
+- **Output:** Updated `01-wiki/architecture/second-brain-master-reference.md` to `v2.1` to reflect the 25-file production directory tree, Sydney (`ap-southeast-2`) client delivery stack, `SKILL-001`–`SKILL-003`, and completion of Phase 6 Priorities 1–5.
+- **Updates:** Updated `ARCH-001` summary line in `index.md`.
+- **Compliance Check:** Verified zero PII, zero real client names, zero secrets, and clean `00-raw/` staging directory.
