@@ -1,9 +1,9 @@
-# Workflow Friction Assessment (`WFM-0.2`) â€” Complete 66-Question Survey Schema & Branching Specification
+# Workflow Friction Assessment (`WFM-0.2`) — Complete 66-Question Survey Schema & Branching Specification
 
-> **Document Status:** Active Survey Instrument (`WFM-0.2`) | **Effective Date:** November 2026 | **Owner:** River City Digital  
-> **Source:** `Survey_questions.pdf`  
-> **Estimated Completion Time:** 10â€“15 minutes per respondent  
-> **Related Documents:** [Workflow Friction Assessment (WFM v0.2.2) â€” Master System & Survey Specification](./wfm-master-system-and-survey-spec.md) | [Workflow Friction Assessment (WFM v0.2) â€” Standard Operational Runbook](../playbooks/wfm-standard-operational-runbook.md)
+> **Document Status:** Active Survey Instrument (`WFM-0.2`) | **Effective Date:** November 2026 | **Owner:** River City Digital  
+> **Source:** `Survey_questions.pdf`  
+> **Estimated Completion Time:** 10–15 minutes per respondent  
+> **Related Documents:** [Workflow Friction Assessment (WFM v0.2.2) — Master System & Survey Specification](./wfm-master-system-and-survey-spec.md) | [Workflow Friction Assessment (WFM v0.2) — Standard Operational Runbook](../playbooks/wfm-standard-operational-runbook.md)
 
 ---
 
@@ -11,30 +11,30 @@
 
 * **Purpose:** Collect confidential workflow, tooling, AI readiness, and operational friction evidence from client staff to prioritize automation, integration, and process improvements.
 * **Privacy & Attribution Controls:**
-  * Name (Q2) and work email (Q3) are optional and used solely if targeted clarification is needed (subject to Q66 consent).
-  * Client reporting describes workflows, roles, and teams without attributing individual feedback.
-  * Raw survey responses are access-controlled and deleted no later than **10 business days** after engagement acceptance.
+  * Name (Q2) and work email (Q3) are optional and used solely if targeted clarification is needed (subject to Q66 consent).
+  * Client reporting describes workflows, roles, and teams without attributing individual feedback.
+  * Raw survey responses are access-controlled and deleted no later than **10 business days** after engagement acceptance.
 * **Global Branching Map:**
-  * **Q6 (`Consent`):** `Yes` -> proceeds to Section 2 (`Q7`); `No` -> branches directly to **End of Form** (no data ingested).
-  * **Q41 (`Add Friction 2?`):** `Yes` -> proceeds to Section 7 (`Q42`); `No` -> skips directly to Section 9 (`Q61`).
-  * **Q51 (`Add Friction 3?`):** `Yes` -> proceeds to Section 8 (`Q52`); `No` -> skips directly to Section 9 (`Q61`).
+  * **Q6 (`Consent`):** `Yes` -> proceeds to Section 2 (`Q7`); `No` -> branches directly to **End of Form** (no data ingested).
+  * **Q41 (`Add Friction 2?`):** `Yes` -> proceeds to Section 7 (`Q42`); `No` -> skips directly to Section 9 (`Q61`).
+  * **Q51 (`Add Friction 3?`):** `Yes` -> proceeds to Section 8 (`Q52`); `No` -> skips directly to Section 9 (`Q61`).
 
 ---
 
-## 2. Section 1 â€” Consent & Identification (`Q1â€“Q6`)
+## 2. Section 1 — Consent & Identification (`Q1–Q6`)
 
 | Q# | Question Prompt | Input Type | Req. | Options / Validation / Branching | SharePoint Target Mapping |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Q1** | Engagement ID *(Do not edit this pre-filled code)* | Short Text | Yes | Must contain `ENG-` (pre-filled via URL parameter) | `WFM_Respondents.EngagementID` |
-| **Q2** | Your full name *(optional)* | Short Text | No | Free text (PII â€” stripped before AI synthesis) | `WFM_Respondents.FullName` |
-| **Q3** | Your work email *(optional)* | Short Text | No | Free text (PII â€” stripped before AI synthesis) | `WFM_Respondents.WorkEmail` |
+| **Q2** | Your full name *(optional)* | Short Text | No | Free text (PII — stripped before AI synthesis) | `WFM_Respondents.FullName` |
+| **Q3** | Your work email *(optional)* | Short Text | No | Free text (PII — stripped before AI synthesis) | `WFM_Respondents.WorkEmail` |
 | **Q4** | What is your job title or role? | Short Text | Yes | Free text | `WFM_Respondents.JobTitle` |
 | **Q5** | Which team or department do you work in? | Short Text | Yes | Free text | `WFM_Respondents.Department` & `WFM_DiagnosticContext.TeamName` |
 | **Q6** | Do you consent to your responses being analysed as part of this workflow assessment? | Single Choice | Yes | `Yes` (proceeds to Q7) \| `No` (**Branches to End of Form**) | `WFM_Respondents.ConsentProvided` |
 
 ---
 
-## 3. Section 2 â€” Work Context (`Q7â€“Q12`)
+## 3. Section 2 — Work Context (`Q7–Q12`)
 
 | Q# | Question Prompt | Input Type | Req. | Options / Validation | SharePoint Target Mapping |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -47,7 +47,7 @@
 
 ---
 
-## 4. Section 3 â€” Applications & Data Handling (`Q13â€“Q19`)
+## 4. Section 3 — Applications & Data Handling (`Q13–Q19`)
 
 | Q# | Question Prompt | Input Type | Req. | Options / Validation | SharePoint Target Mapping |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -61,7 +61,7 @@
 
 ---
 
-## 5. Section 4 â€” AI Readiness & Sentiment (`Q20â€“Q25`)
+## 5. Section 4 — AI Readiness & Sentiment (`Q20–Q25`)
 
 | Q# | Question Prompt | Input Type | Req. | Options / Validation | SharePoint Target Mapping |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -74,7 +74,7 @@
 
 ---
 
-## 6. Section 5 â€” Workflow Frictions Overview (`Q26â€“Q31`)
+## 6. Section 5 — Workflow Frictions Overview (`Q26–Q31`)
 
 | Q# | Question Prompt | Input Type | Req. | Options / Validation | SharePoint Target Mapping |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -87,63 +87,63 @@
 
 ---
 
-## 7. Section 6 â€” Friction Deep Dive 1 (`Q32â€“Q41`, Mandatory)
+## 7. Section 6 — Friction Deep Dive 1 (`Q32–Q41`, Mandatory)
 
 *Creates `FrictionNumber = 1` in `WFM_Frictions`.*
 
 | Q# | Question Prompt | Input Type | Req. | Options / Validation / Branching | SharePoint Target Mapping |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Q32** | **Friction 1 â€” Short Title:** Give this workflow friction a brief name. | Short Text | Yes | Free text | `WFM_Frictions.FrictionDescription` (Title prefix) |
-| **Q33** | **Friction 1 â€” Detailed Description:** Describe what happens step by step, what triggers it, and why it causes delay or frustration. | Long Text | Yes | Free text | `WFM_Frictions.FrictionDescription` |
-| **Q34** | **Friction 1 â€” Systems & Tools Involved:** Which apps, spreadsheets, forms, or inboxes are involved? | Short Text | Yes | Free text | `WFM_Frictions.ApplicationsInvolved` |
-| **Q35** | **Friction 1 â€” Frequency:** How often does this friction occur for you? | Single Choice | Yes | `Monthly` (`0.25/wk`) \| `Fortnightly` (`0.5/wk`) \| `Weekly` (`1/wk`) \| `Daily` (`5/wk`) \| `Several times daily` (`15/wk`) | `WFM_Frictions.Frequency` (feeds `WeeklyHoursMidpoint`) |
-| **Q36** | **Friction 1 â€” Time Per Occurrence:** Roughly how many minutes does each occurrence take or delay you? | Single Choice | Yes | `Less than 10 minutes` (`5m`) \| `10-20 minutes` (`15m`) \| `20-40 minutes` (`30m`) \| `40-60 minutes` (`50m`) \| `More than 60 minutes` (`75m`) | `WFM_Frictions.DurationBand` (feeds `WeeklyHoursMidpoint`) |
-| **Q37** | **Friction 1 â€” People Affected:** Roughly how many people in your team or organisation experience this same friction? | Single Choice | Yes | `Just me (1)` \| `2-4 people` \| `5-10 people` (`BroadlyAffected`) \| `More than 10 people` (`BroadlyAffected`) | `WFM_Frictions.PeopleAffected` (feeds `TriageFlags`) |
-| **Q38** | **Friction 1 â€” Operational Impact:** What is the impact when this friction happens (e.g., delays, errors, rework, customer impact)? | Single Choice | Yes | `Low` \| `Medium` \| `High` (`HighImpact`) \| `Critical` (`HighImpact`) | `WFM_Frictions.ImpactLevel` (feeds `TriageFlags`) |
-| **Q39** | **Friction 1 â€” Root Cause:** What do you think is the main underlying cause? | Single Choice | Yes | `Manual data entry / copy-paste` \| `Systems not talking to each other` \| `Unclear process or ownership` \| `Missing or inconsistent information from others` \| `Approval bottlenecks` \| `Tool limitations or slow systems` \| `Lack of training` \| `Other` | `WFM_Frictions.RootCause` |
-| **Q40** | **Friction 1 â€” Current Workaround:** How do you currently work around this issue? | Long Text | No | Free text | `WFM_Frictions.CurrentWorkaround` |
+| **Q32** | **Friction 1 — Short Title:** Give this workflow friction a brief name. | Short Text | Yes | Free text | `WFM_Frictions.FrictionDescription` (Title prefix) |
+| **Q33** | **Friction 1 — Detailed Description:** Describe what happens step by step, what triggers it, and why it causes delay or frustration. | Long Text | Yes | Free text | `WFM_Frictions.FrictionDescription` |
+| **Q34** | **Friction 1 — Systems & Tools Involved:** Which apps, spreadsheets, forms, or inboxes are involved? | Short Text | Yes | Free text | `WFM_Frictions.ApplicationsInvolved` |
+| **Q35** | **Friction 1 — Frequency:** How often does this friction occur for you? | Single Choice | Yes | `Monthly` (`0.25/wk`) \| `Fortnightly` (`0.5/wk`) \| `Weekly` (`1/wk`) \| `Daily` (`5/wk`) \| `Several times daily` (`15/wk`) | `WFM_Frictions.Frequency` (feeds `WeeklyHoursMidpoint`) |
+| **Q36** | **Friction 1 — Time Per Occurrence:** Roughly how many minutes does each occurrence take or delay you? | Single Choice | Yes | `Less than 10 minutes` (`5m`) \| `10-20 minutes` (`15m`) \| `20-40 minutes` (`30m`) \| `40-60 minutes` (`50m`) \| `More than 60 minutes` (`75m`) | `WFM_Frictions.DurationBand` (feeds `WeeklyHoursMidpoint`) |
+| **Q37** | **Friction 1 — People Affected:** Roughly how many people in your team or organisation experience this same friction? | Single Choice | Yes | `Just me (1)` \| `2-4 people` \| `5-10 people` (`BroadlyAffected`) \| `More than 10 people` (`BroadlyAffected`) | `WFM_Frictions.PeopleAffected` (feeds `TriageFlags`) |
+| **Q38** | **Friction 1 — Operational Impact:** What is the impact when this friction happens (e.g., delays, errors, rework, customer impact)? | Single Choice | Yes | `Low` \| `Medium` \| `High` (`HighImpact`) \| `Critical` (`HighImpact`) | `WFM_Frictions.ImpactLevel` (feeds `TriageFlags`) |
+| **Q39** | **Friction 1 — Root Cause:** What do you think is the main underlying cause? | Single Choice | Yes | `Manual data entry / copy-paste` \| `Systems not talking to each other` \| `Unclear process or ownership` \| `Missing or inconsistent information from others` \| `Approval bottlenecks` \| `Tool limitations or slow systems` \| `Lack of training` \| `Other` | `WFM_Frictions.RootCause` |
+| **Q40** | **Friction 1 — Current Workaround:** How do you currently work around this issue? | Long Text | No | Free text | `WFM_Frictions.CurrentWorkaround` |
 | **Q41** | Would you like to report a **second** workflow friction in detail? | Single Choice | Yes | `Yes` (proceeds to Q42) \| `No` (**Branches to Q61**) | Branching trigger (`FrictionNumber = 2`) |
 
 ---
 
-## 8. Section 7 â€” Friction Deep Dive 2 (`Q42â€“Q51`, Conditional on `Q41 = Yes`)
+## 8. Section 7 — Friction Deep Dive 2 (`Q42–Q51`, Conditional on `Q41 = Yes`)
 
 *Creates `FrictionNumber = 2` in `WFM_Frictions`. Identical field schema and midpoint/triage mappings to Section 6.*
 
 | Q# | Question Prompt | Input Type | Req. | Options / Validation / Branching |
 | :--- | :--- | :--- | :--- | :--- |
-| **Q42** | **Friction 2 â€” Short Title:** Give this workflow friction a brief name. | Short Text | Yes | Free text |
-| **Q43** | **Friction 2 â€” Detailed Description:** Describe what happens step by step, what triggers it, and why it causes delay or frustration. | Long Text | Yes | Free text |
-| **Q44** | **Friction 2 â€” Systems & Tools Involved:** Which apps, spreadsheets, forms, or inboxes are involved? | Short Text | Yes | Free text |
-| **Q45** | **Friction 2 â€” Frequency:** How often does this friction occur for you? | Single Choice | Yes | `Monthly` \| `Fortnightly` \| `Weekly` \| `Daily` \| `Several times daily` |
-| **Q46** | **Friction 2 â€” Time Per Occurrence:** Roughly how many minutes does each occurrence take or delay you? | Single Choice | Yes | `Less than 10 minutes` \| `10-20 minutes` \| `20-40 minutes` \| `40-60 minutes` \| `More than 60 minutes` |
-| **Q47** | **Friction 2 â€” People Affected:** Roughly how many people experience this same friction? | Single Choice | Yes | `Just me (1)` \| `2-4 people` \| `5-10 people` \| `More than 10 people` |
-| **Q48** | **Friction 2 â€” Operational Impact:** What is the impact when this friction happens? | Single Choice | Yes | `Low` \| `Medium` \| `High` \| `Critical` |
-| **Q49** | **Friction 2 â€” Root Cause:** What do you think is the main underlying cause? | Single Choice | Yes | Same 8 root-cause options as Q39 |
-| **Q50** | **Friction 2 â€” Current Workaround:** How do you currently work around this issue? | Long Text | No | Free text |
+| **Q42** | **Friction 2 — Short Title:** Give this workflow friction a brief name. | Short Text | Yes | Free text |
+| **Q43** | **Friction 2 — Detailed Description:** Describe what happens step by step, what triggers it, and why it causes delay or frustration. | Long Text | Yes | Free text |
+| **Q44** | **Friction 2 — Systems & Tools Involved:** Which apps, spreadsheets, forms, or inboxes are involved? | Short Text | Yes | Free text |
+| **Q45** | **Friction 2 — Frequency:** How often does this friction occur for you? | Single Choice | Yes | `Monthly` \| `Fortnightly` \| `Weekly` \| `Daily` \| `Several times daily` |
+| **Q46** | **Friction 2 — Time Per Occurrence:** Roughly how many minutes does each occurrence take or delay you? | Single Choice | Yes | `Less than 10 minutes` \| `10-20 minutes` \| `20-40 minutes` \| `40-60 minutes` \| `More than 60 minutes` |
+| **Q47** | **Friction 2 — People Affected:** Roughly how many people experience this same friction? | Single Choice | Yes | `Just me (1)` \| `2-4 people` \| `5-10 people` \| `More than 10 people` |
+| **Q48** | **Friction 2 — Operational Impact:** What is the impact when this friction happens? | Single Choice | Yes | `Low` \| `Medium` \| `High` \| `Critical` |
+| **Q49** | **Friction 2 — Root Cause:** What do you think is the main underlying cause? | Single Choice | Yes | Same 8 root-cause options as Q39 |
+| **Q50** | **Friction 2 — Current Workaround:** How do you currently work around this issue? | Long Text | No | Free text |
 | **Q51** | Would you like to report a **third** workflow friction in detail? | Single Choice | Yes | `Yes` (proceeds to Q52) \| `No` (**Branches to Q61**) |
 
 ---
 
-## 9. Section 8 â€” Friction Deep Dive 3 (`Q52â€“Q60`, Conditional on `Q51 = Yes`)
+## 9. Section 8 — Friction Deep Dive 3 (`Q52–Q60`, Conditional on `Q51 = Yes`)
 
 *Creates `FrictionNumber = 3` in `WFM_Frictions`. Identical field schema and midpoint/triage mappings to Section 6; advances automatically to Q61.*
 
 | Q# | Question Prompt | Input Type | Req. | Options / Validation |
 | :--- | :--- | :--- | :--- | :--- |
-| **Q52** | **Friction 3 â€” Short Title:** Give this workflow friction a brief name. | Short Text | Yes | Free text |
-| **Q53** | **Friction 3 â€” Detailed Description:** Describe what happens step by step, what triggers it, and why it causes delay or frustration. | Long Text | Yes | Free text |
-| **Q54** | **Friction 3 â€” Systems & Tools Involved:** Which apps, spreadsheets, forms, or inboxes are involved? | Short Text | Yes | Free text |
-| **Q55** | **Friction 3 â€” Frequency:** How often does this friction occur for you? | Single Choice | Yes | `Monthly` \| `Fortnightly` \| `Weekly` \| `Daily` \| `Several times daily` |
-| **Q56** | **Friction 3 â€” Time Per Occurrence:** Roughly how many minutes does each occurrence take or delay you? | Single Choice | Yes | `Less than 10 minutes` \| `10-20 minutes` \| `20-40 minutes` \| `40-60 minutes` \| `More than 60 minutes` |
-| **Q57** | **Friction 3 â€” People Affected:** Roughly how many people experience this same friction? | Single Choice | Yes | `Just me (1)` \| `2-4 people` \| `5-10 people` \| `More than 10 people` |
-| **Q58** | **Friction 3 â€” Operational Impact:** What is the impact when this friction happens? | Single Choice | Yes | `Low` \| `Medium` \| `High` \| `Critical` |
-| **Q59** | **Friction 3 â€” Root Cause:** What do you think is the main underlying cause? | Single Choice | Yes | Same 8 root-cause options as Q39 |
-| **Q60** | **Friction 3 â€” Current Workaround:** How do you currently work around this issue? | Long Text | No | Free text |
+| **Q52** | **Friction 3 — Short Title:** Give this workflow friction a brief name. | Short Text | Yes | Free text |
+| **Q53** | **Friction 3 — Detailed Description:** Describe what happens step by step, what triggers it, and why it causes delay or frustration. | Long Text | Yes | Free text |
+| **Q54** | **Friction 3 — Systems & Tools Involved:** Which apps, spreadsheets, forms, or inboxes are involved? | Short Text | Yes | Free text |
+| **Q55** | **Friction 3 — Frequency:** How often does this friction occur for you? | Single Choice | Yes | `Monthly` \| `Fortnightly` \| `Weekly` \| `Daily` \| `Several times daily` |
+| **Q56** | **Friction 3 — Time Per Occurrence:** Roughly how many minutes does each occurrence take or delay you? | Single Choice | Yes | `Less than 10 minutes` \| `10-20 minutes` \| `20-40 minutes` \| `40-60 minutes` \| `More than 60 minutes` |
+| **Q57** | **Friction 3 — People Affected:** Roughly how many people experience this same friction? | Single Choice | Yes | `Just me (1)` \| `2-4 people` \| `5-10 people` \| `More than 10 people` |
+| **Q58** | **Friction 3 — Operational Impact:** What is the impact when this friction happens? | Single Choice | Yes | `Low` \| `Medium` \| `High` \| `Critical` |
+| **Q59** | **Friction 3 — Root Cause:** What do you think is the main underlying cause? | Single Choice | Yes | Same 8 root-cause options as Q39 |
+| **Q60** | **Friction 3 — Current Workaround:** How do you currently work around this issue? | Long Text | No | Free text |
 
 ---
 
-## 10. Section 9 â€” Recommendations & Closing (`Q61â€“Q66`)
+## 10. Section 9 — Recommendations & Closing (`Q61–Q66`)
 
 | Q# | Question Prompt | Input Type | Req. | Options / Validation | SharePoint Target Mapping |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -153,3 +153,36 @@
 | **Q64** | How much do you think your wider organisation would benefit from practical, well-governed AI tools? | Single Choice | Yes | `Not much` \| `Somewhat` \| `Significantly` \| `Transformatively` | `WFM_DiagnosticContext.OrgAIBenefit` |
 | **Q65** | Is there anything else you would like to share about your workflows, tools, or ideas for improvement? | Long Text | No | Free text | `WFM_DiagnosticContext.AdditionalComments` |
 | **Q66** | Are you happy for a River City Digital adviser to contact you briefly if clarification on any of your answers would help? | Single Choice | Yes | `Yes` \| `No` *(Must be `Yes` before any follow-up outreach)* | `WFM_Respondents.FollowUpConsent` |
+
+---
+
+## 11. Survey Interpretation Updates — AI Opportunity Assessment, Managed AI Services & Productisation Strategy
+
+* **Purpose:** Update survey interpretation logic to support AI Opportunity Assessment, Managed AI Services and Productisation Strategy.
+
+* **New Mapping Layer:**
+  * Workflow Friction Analysis
+  * AI Readiness Analysis
+  * AI Opportunity Detection
+  * Managed Service Potential Analysis
+  * Productisation Potential Analysis
+
+* **New Scoring Domains:**
+  * **AI Readiness:**
+    * Familiarity
+    * Confidence
+    * Sentiment
+    * Governance Awareness
+    * Adoption Willingness
+  * **Managed Service Signals:**
+    * Long-term support demand
+    * Knowledge dependency
+    * Ongoing operational complexity
+    * Content maintenance needs
+    * Policy maintenance requirements
+  * **Productisation Signals:**
+    * Repeatability
+    * Standardisation
+    * Cross-customer applicability
+    * Industry relevance
+
